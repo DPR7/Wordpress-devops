@@ -3,7 +3,7 @@ A look at the php code that Wordpress uses
 
 <strong>From other site </strong>
 
-A small guide for low level control of Wordpress
+<h1>A small guide for low level control of Wordpress</h1>
 
 A small introduction of the files that Wordpress uses
 

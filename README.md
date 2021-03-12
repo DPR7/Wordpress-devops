@@ -1,7 +1,7 @@
 # Wordpress-devops
 A look at the php code that Wordpress uses
 
-<b>From other site </b>
+<strong>From other site </strong>
 
 A small guide for low level control of Wordpress
 

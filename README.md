@@ -5,7 +5,7 @@ A look at the php code that Wordpress uses
 
 <h1>A small guide for low level control of Wordpress</h1>
 
-<h2>A small introduction of the files that Wordpress uses</h2>
+<h3>A small introduction of the files that Wordpress uses</h3>
 
 Wordpress was and is still a very populair platform for building websites with a minimal amount of effect.
 The downsite of this is that many of it's users are not aware of the coding aspect of it. 

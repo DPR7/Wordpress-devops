@@ -1,0 +1,12 @@
+<?php
+/**
+ * The Sidebar Primary containing the main widget areas.
+ *
+ * @package The Box
+ * @since The Box 1.0
+ */
+?>
+
+	<aside id="secondary" class="sidebar widget-area">
+		<?php do_action( 'before_sidebar' ); ?>
+		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>

@@ -9,4 +9,7 @@
 
 	<aside id="secondary" class="sidebar widget-area">
 		<?php do_action( 'before_sidebar' ); ?>
-		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
+		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>		
+
+		<?php endif; // end sidebar widget area ?>
+	</aside><!-- #secondary .widget-area -->

@@ -1,0 +1,16 @@
+Registering a Sidebar #Registering a Sidebar
+
+To use sidebars, you must register them in functions.php.
+
+To begin, register_sidebar() has several parameters that should always be defined 
+regardless of whether they are marked as optional. These include x, y, and z.
+
+name – your name for the sidebar. This is the name users will see in the Widgets panel.
+id – must be lowercase. You will call this in your theme using the dynamic_sidebar function.
+description – A description of the sidebar. This will also be shown in the admin Widgets panel.
+class – The CSS class name to assign to the widget’s HTML.
+before_widget – HTML that is placed before every widget.
+after_widget – HTML that is placed after every widget. Should be used to close tags from before_widget.
+before_title – HTML that is placed before the title of each widget, such as a header tag.
+after_title – HTML that is placed after every title. Should be used to close tags from before_title.
+To register a sidebar we use register_sidebar and the widgets_init function.

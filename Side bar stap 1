@@ -14,3 +14,5 @@ after_widget – HTML that is placed after every widget. Should be used to close
 before_title – HTML that is placed before the title of each widget, such as a header tag.
 after_title – HTML that is placed after every title. Should be used to close tags from before_title.
 To register a sidebar we use register_sidebar and the widgets_init function.
+
+Source : https://developer.wordpress.org/themes/functionality/sidebars/

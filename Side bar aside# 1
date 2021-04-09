@@ -1,0 +1,12 @@
+<aside id="secondary" class="sidebar widget-area">
+	<div class="widget-wrapper">
+		<div id="media_image-2" class="widget widget_media_image">
+		
+			<h3 class="widget-title"><span>Afbeelding</span></h3>
+			
+				<img width="300" height="59" src="http://aquapoeder.nl/wp-content/uploads/logod6-1-300x59.jpg" class="image wp-image-209  attachment-medium size-medium" alt="" loading="lazy" style="max-width: 100%; height: auto;" 
+
+				srcset="http://aquapoeder.nl/wp-content/uploads/logod6-1-300x59.jpg 300w, http://aquapoeder.nl/wp-content/uploads/logod6-1.jpg 550w" sizes="(max-width: 300px) 100vw, 300px">
+
+		</div>
+	</aside>

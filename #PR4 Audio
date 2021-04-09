@@ -1,0 +1,9 @@
+<div class="widget-wrapper">
+	<div id="media_audio-2" class="widget widget_media_audio">
+		<h3 class="widget-title"><span>audio 1</span></h3>
+
+	<!--[if lt IE 9]><script>document.createElement('audio');</script>
+
+	<![endif]-->
+	<span class="mejs-offscreen">Audiospeler</span>
+		

@@ -1,0 +1,20 @@
+Description #Description
+WordPress offers filter hooks to allow plugins to modify various types of 
+internal data at runtime.
+
+A plugin can modify data by binding a callback to a filter hook. 
+When the filter is later applied, each bound callback is run in order of priority,
+and given the opportunity to modify a value by returning a new value.
+
+The following example shows how a callback function is bound to a filter hook.
+
+Note that $example is passed to the callback, (maybe) modified, then returned:
+
+<code>
+function example_callback( $example ) {
+    // Maybe modify $example in some way.
+    return $example;
+}
+add_filter( 'example_filter', 'example_callback' );
+
+</code>

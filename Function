@@ -1,0 +1,13 @@
+The files of WordPress define many useful PHP functions. 
+Some of the functions, known as Template Tags, 
+are defined especially for use in WordPress Themes. 
+There are also some functions related to actions and filters (the Plugin API), 
+which are therefore used primarily for developing Plugins. 
+The rest are used to create the core WordPress functionality.
+
+Many of the core WordPress functions are useful to Plugin and Theme developers.
+So, this article lists most of the core functions, excluding Template Tags. 
+At the bottom of the page, there is a section listing other resources 
+for finding information about WordPress functions.
+In addition to this information, 
+the WordPress Code Reference site details all the WordPress functions by version since 2.6.1.

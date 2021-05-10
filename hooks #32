@@ -1,0 +1,8 @@
+<h1> hooks </h1>
+
+Hooks are a way for one piece of code to interact/modify 
+another piece of code at specific, pre-defined spots. 
+They make up the foundation for how plugins and themes interact 
+with WordPress Core, but they’re also used extensively by Core itself.
+
+https://developer.wordpress.org/plugins/hooks/

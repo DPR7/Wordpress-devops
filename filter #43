@@ -1,0 +1,8 @@
+Filters are functions that WordPress uses to pass data through. 
+Passing data through filters allows developers to modify the default behavior 
+of a specific function. 
+Functions used to filter data are called hooks. 
+Filters and Actions together allow developers great flexibility 
+to modify default WordPress filters and actions and even
+create their own custom filters and actions so that other 
+developers can extend their plugins or themes.

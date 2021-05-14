@@ -1,0 +1,10 @@
+Template Terminology #Template Terminology
+The term “template” is used in different ways when working with WordPress themes:
+
+Templates files exist within a theme and express how your site is displayed.
+Page Templates are those that apply only to pages to change their look and feel.  
+A page template can be applied to a single page, a page section, or a class of pages.
+Template Tags are built-in WordPress functions you can use inside a template file to retrieve and display data 
+(such as the_title() and the_content()).
+Template Hierarchy is the logic WordPress uses to decide which theme template file(s) to use, 
+depending on the content being requested.

@@ -1,0 +1,22 @@
+<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+			<div class="error-404 not-found">
+				<header class="page-header">
+					<h1 class="page-title"><?php _e( 'Oops! Uh oh. ¯\_(ツ)_/¯.', 'twentynineteen' ); ?></h1>
+				</header><!-- .page-header -->
+
+				<div class="page-content">
+					<p><?php _e( 'The page you requested could not be found. <br>Is there any chance you were looking for one of these?', 'twentynineteen' ); ?></p>
+					<h5> Get your Macstock 2018 ticket yet? <br></h5>
+					<h5> Web excursions: June 6, 2011 - June 8, 2011<br><h5>
+					<h5> Web Excursions for July 08, 2013<br></h5 >
+
+				</div><!-- .page-content -->
+			</div><!-- .error-404 -->
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<?php
+get_footer();

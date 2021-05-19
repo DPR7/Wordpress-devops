@@ -1,0 +1,22 @@
+function register_nav_menus( $locations = array() ) {
+	
+    global $_wp_registered_nav_menus; 
+    add_theme_support( 'menus' );
+    foreach ( $locations as $key => $value ) {
+        if ( is_int( $key ) ) {
+            _doing_it_wrong( __FUNCTION__, __( 'Nav menu locations must be strings.' ),
+			'5.3.0' );
+            break;
+        }
+    }
+ 
+    $_wp_registered_nav_menus = array_merge( (array) 
+		$_wp_registered_nav_menus, 
+		$locations );
+}
+
+		Gebruikt :
+		register_nav_menus( array(
+			'primary' => __( 'Primary Menu', 'the-box' ),
+			'secondary' => __( 'Footer Menu', 'the-box' )
+		) );

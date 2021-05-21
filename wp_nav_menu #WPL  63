@@ -1,0 +1,11 @@
+Gebruikt :
+<?php
+	wp_nav_menu(array(
+	
+		'theme_location' => 'menu-2',
+		'menu_class'     => 'main-menu',
+		'items_wrap'     => '<p>Company Info:</p>
+							 <ul id="%1$s" class="%2$s">%3$s</ul>',
+					)
+			);
+?>

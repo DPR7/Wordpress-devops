@@ -1,0 +1,49 @@
+/*
+ Theme Name:   Twenty Nineteen Child
+ Theme URI:    http://dprdesign.nl
+ Description:  Twenty Nineteen Child Theme
+ Author:       Tom van Loon
+ Author URI:   http://dprdesign.nl
+ Template:     twentynineteen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twentynineteenchild
+*/
+.site-description {
+    color: #b5b5b5;
+	font-style: italic;
+}
+.entry .entry-title:before {
+    background: lightskyblue;
+    content: "\020";
+    display: block;
+    height: 3px;
+    margin: 1rem 0;
+    width: 1em;
+}
+.entry-title, .not-found .page-title, .error-404 .page-title, .has-larger-font-size, h2 {
+    font-size: 1.5em;
+}
+
+/* Author bio mod */
+.author-bio .author-heading .avatar{
+	height: auto;
+	width: auto;
+	display: inline-block;
+}
+
+/* Secondary menu */
+.menu-menu-2-container p {
+    font-size: 0.8em;
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+.menu-menu-2-container ul {
+    font-size: 0.8em;
+    display: inline-block;
+
+}

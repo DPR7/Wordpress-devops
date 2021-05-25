@@ -1,0 +1,64 @@
+<?php
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+function my_theme_enqueue_styles() {
+    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'child-style',
+      get_stylesheet_directory_uri() . '/style.css',
+      array('parent-style'),
+      wp_get_theme()->get('Version')
+    );
+}
+
+/**
+ * Documentation for function.
+ */
+function twentynineteen_the_posts_navigation() {
+  the_posts_pagination(
+    array(
+      'mid_size'  => 2,
+      'prev_text' => '&laquo; <span class="nav-prev-text">Newer</span>',
+      'next_text' => '<span class="nav-next-text">Older</span> &raquo;',
+    )
+  );
+}
+
+function post_title ( $title, $id=null ){
+  if ( in_category( 'post', $id ) ) {
+    $title = "" . $title;
+    }
+    return $title;
+}
+
+add_filter('the_title', 'post_title', 10,2);
+  
+function twentynineteen_child_functionality(){
+
+  if ( is_home () ) {
+  	// default homepage
+  } elseif ( is_front_page () ) {
+  	// static homepage
+  	remove_action( 'widgets_init', 'twentynineteen_widgets_init' );
+  }	elseif ( is_single () ) {  	
+  	// blog page
+  } else {
+  	// everything elese
+  	remove_action( 'widgets_init', 'twentynineteen_widgets_init' );
+  }
+
+  register_nav_menus(
+			array(
+				'menu-2' => __( 'Secondary', 'twentynineteen' )
+			)
+		);
+
+}
+add_action('after_setup_theme', 'twentynineteen_child_functionality');
+
+
+/** For removing the parent function of the theme
+function twentynineteen_posted_by() {}{
+/** no actions in the function
+	;
+}
+*/
+

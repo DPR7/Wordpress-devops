@@ -1,1 +1,314 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Gets all CSS files.
+ *
+ * @return array Associative array of $handle => $data pairs.
+ */
+protected function get_css_files() : array {
+	if ( is_array( $this->css_files ) ) {
+		return $this->css_files;
+	}
+
+	$css_files = array(
+		'wp-rig-global'     => array(
+			'file'   => 'global.min.css',
+			'global' => true,	
+			),
+			
+		'wp-rig-content'    => array(
+			'file'             => 'content.min.css',
+			'preload_callback' => '__return_true',
+			),
+			
+		'wp-rig-sidebar'    => array(
+			'file'             => 'sidebar.min.css',
+			'preload_callback' => function() {
+				return wp_rig()->is_primary_sidebar_active();
+				},
+			),
+			
+		'wp-rig-widgets'    => array(
+			'file'             => 'widgets.min.css',
+			'preload_callback' => function() {
+			return wp_rig()->is_primary_sidebar_active();
+				},
+			),
+			
+		'wp-rig-front-page' => array(
+			'file' => 'front-page.min.css',
+			'preload_callback' => function() {
+				global $template;
+				return 'front-page.php' === basename( $template );
+				},
+			),
+	);

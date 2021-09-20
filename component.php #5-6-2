@@ -1,0 +1,6 @@
+/**
+* Display the related posts.
+*/
+	public function display_related_posts() {
+		echo '<h2>New Related Posts:</h2>';
+	}

@@ -1,0 +1,15 @@
+// The filter callback function.
+function example_callback( $string, $arg1, $arg2 ) {
+    // (maybe) modify $string.
+    return $string;
+}
+add_filter( 'example_filter', 'example_callback', 10, 3 );
+
+/*
+ * Apply the filters by calling the 'example_callback()' function
+ * that's hooked onto `example_filter` above.
+ *
+ * - 'example_filter' is the filter hook.
+ * - 'filter me' is the value being filtered.
+ * - $arg1 and $arg2 are the additional arguments passed to the callback.
+$value = apply_filters( 'example_filter', 'filter me', $arg1, $arg2 );

@@ -1,0 +1,64 @@
+<?php
+/**
+ * Plugin Name:       single-post-cta
+ * Plugin URI:        https://example.com/plugins/the-basics/
+ * Description:       Adds sidebar to single posts
+ * Version:           0.1
+ * Author:            Tom van Loon
+ * Author URI:        https://dprdesign.nl
+ * License:           GPL v2 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       spc
+ */
+
+if ( !defined( 'ABSPATH' ) ) {
+	die;
+}
+
+add_action( 'wp_enqueue_scripts', 'spcp_login_stylesheet' );
+/**
+ * Load plugin styles.
+ *
+ */
+function spcp_login_stylesheet() {
+
+	if ( is_single() ) {
+		wp_enqueue_style( 'spcp-custom-stylesheet', plugin_dir_url(__FILE__) . 'spc-styles.css' );
+	}
+}
+
+// Uncomment the following line to keep spcp-custom-stylesheet from loading
+// add_filter( 'spcp_load_styles', '__return_false' );
+
+add_action( 'widgets_init', 'spc_register_sidebar');
+/**
+ * Registers a sidebar called Post Content Plus.
+ */
+
+function spc_register_sidebar() {
+	
+		register_sidebar( array(
+			'name'			=> __( 'Post Content Plus', 'spc'),
+			'id'			=> 'spcp-sidebar',
+			'description' 	=> __( 'Widgets in this area display on single posts', 'spc' ),
+			'before_widget'	=> '<div class="widget spc-sidebar">',
+			'after_widget'	=> '</div>',
+			'before_title'	=> '<h2 class="widgettitle spc-title">',
+			'after_title'	=> '</h2>',
+		) );
+
+}
+
+add_filter( 'the_content', 'spcp_display_sidebars' );
+/**
+ * Display sidebar on single posts.
+ * 
+ */
+function spcp_display_sidebars( $content ) {
+
+	if ( is_single() && is_active_sidebar( 'spcp-sidebar' ) && is_main_query()  ) {
+		dynamic_sidebar( 'spcp-sidebar' );
+	}
+
+	return $content;
+}

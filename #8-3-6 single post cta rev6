@@ -1,0 +1,11 @@
+function spcp_login_stylesheet() {
+
+	if ( apply_filters( 'spcp_load_styles', true ) ) {
+		if ( is_single() ) {
+		wp_enqueue_style( 'spcp-custom-stylesheet', plugin_dir_url(__FILE__) . 'spc-styles.css' );
+		}
+	}
+}
+
+// Uncomment the following line to keep spcp-custom-stylesheet from loading
+// add_filter( 'spcp_load_styles', '__return_false' );
